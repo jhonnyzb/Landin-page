@@ -32,6 +32,12 @@ export class ServicesApiService {
   public getstarchips() {
     return this.httpClient.get('https://swapi.co/api/starships/')
   }
+  public getPeopleSearch(Name:string) {
+    return this.httpClient.get(`https://swapi.co/api/people/?search=${Name}`)
+  }
+
+
+
 
   public getimageFilms() {
      return this.filmsImage = [
