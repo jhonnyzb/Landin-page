@@ -1,0 +1,43 @@
+.header {
+    background: url(../../../assets/img/1.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+
+  }
+  .navbar_{
+    background: rgba(0, 0, 0, 0.5);
+    padding-right: 30%;
+    
+  }
+  .Navtop{
+    background: rgba(0, 0, 0, 0.5);
+    color: yellow;
+    padding-right: 10%
+    
+  }
+  .navbar_1{
+    background: rgba(0, 0, 0, 0.5);
+    
+  }
+  .navbar_ h5{
+      color: yellow;
+  }
+  
+  .navbar-brand{
+      color: white;
+      font-size: 1rem
+  }
+ 
+  a.navbar-brand:hover{
+      color: yellow
+  }
+  .navbar_1 p{
+      color: yellow;
+      font-weight: bold;
+      margin-top: 10px
+
+  }
+
+
+
+  

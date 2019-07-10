@@ -1,0 +1,88 @@
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>PLANETAS STAR WARS</h3>
+      <hr class="style1">
+    </div>
+  </div>
+  <div class="row pl-5 pr-5">
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4" *ngFor="let data of Planets?.results;let k = index" >
+      <div class="card">
+          <img class="card-img-top" [src]="planetsImage[k].title" style="height:180px">
+          <div class="card-block text-center">
+              <h6 class="text-bold">{{data.name}}</h6>
+              <button class="btn"  (click)="Info(data)" data-toggle="modal" data-target="#exampleModal" >Leer mas....</button>
+          </div>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="head ">
+          <h5>{{planetsInfo.name}}<span class="fa fa-globe fa_"></span></h5>
+        </div>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">Clima</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo.climate}}</p>
+            </tr>
+            <tr>
+              <th scope="row">Diametro</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo.diameter}}</p>
+            </tr>
+            <tr>
+              <th scope="row">Gravedad</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo.gravity}}</p>
+            </tr>
+            <tr>
+              <th scope="row">Periodo orbital</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo. orbital_period}}</p>
+            </tr>
+            <tr>
+                <th scope="row">Poblacion</th>
+              </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo.population}}</p>
+            </tr>
+            <tr>
+                <th scope="row">Periodo de rotacion</th>
+              </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo.rotation_period}}</p>
+            </tr>
+            <tr>
+                <th scope="row">terreno</th>
+              </tr>
+            <tr>
+              <p class="float-right">{{planetsInfo.terrain}}</p>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><span class="fa fa-close"></span>
+          Close</button>
+      </div>
+    </div>
+  </div>

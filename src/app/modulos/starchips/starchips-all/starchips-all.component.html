@@ -1,0 +1,83 @@
+
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>STARCHIPS STAR WARS</h3>
+      <hr class="style1">
+    </div>
+  </div>
+  <div class="row pl-5 pr-5">
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4" *ngFor="let data of Starchips?.results" >
+      <div class="card">
+          <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+          <div class="card-block text-center">
+              <h6 class="text-bold">{{data.name}}</h6>
+              <button class="btn" (click)="Info(data)" data-toggle="modal" data-target="#exampleModal" >Leer mas....</button>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="head ">
+          <h5>{{starchipsInfo.name}}<span class="fa fa-rocket fa_"></span></h5>
+        </div>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">Capacidad de carga</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{starchipsInfo.cargo_capacity}}</p>
+            </tr>
+            <tr>
+              <th scope="row">Consumo</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{starchipsInfo.consumables}}</p>
+            </tr>
+            <tr>
+              <th scope="row">Costo</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{starchipsInfo.cost_in_credits}}</p>
+            </tr>
+            <tr>
+              <th scope="row">Fabricante</th>
+            </tr>
+            <tr>
+              <p class="float-right">{{starchipsInfo-manufacturer}}</p>
+            </tr>
+            <tr>
+                <th scope="row">Modelo</th>
+              </tr>
+            <tr>
+              <p class="float-right">{{starchipsInfo.model}}</p>
+            </tr>
+            <tr>
+                <th scope="row">Pasajeros</th>
+              </tr>
+            <tr>
+              <p class="float-right">{{starchipsInfo.passengers}}</p>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><span class="fa fa-close"></span>
+          Close</button>
+      </div>
+    </div>
+  </div>
